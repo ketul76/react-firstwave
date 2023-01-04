@@ -1,0 +1,42 @@
+
+/* Header part css start */
+.menubar {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 55px;
+    background-color: #fafbfc;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+li {
+    padding: 16px 25px;
+}
+
+li a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #17181A;
+}
+
+.demo-btn button {
+    padding: 11px 20px;
+    background: rgba(0, 112, 240, 0.9);
+    border-radius: 30px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Header part css end */
