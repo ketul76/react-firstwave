@@ -1,7 +1,8 @@
 import React from "react";
 import './companyleadership.css';
 
-function CompanyLeadership(){
+function CompanyLeadership(props){
+   let companyLeaderData = props.companyLeadershipData;
     return(
         <>
               {/* <!-- company manager home page start --> */}
@@ -11,26 +12,25 @@ function CompanyLeadership(){
                         <img src="./company-leadership/manager.svg" alt=""/>
                     </div>
                     <div className="manager-text">
-                        <h1>Manager</h1>
-                        <p>Michal Kosinski is an Associate Professor in Organizational Behavior at Stanford’s Graduate School of Business and studies job-person fit and humans using cutting-edge computational methods.</p>
-                        <h6>Michal Kosinski is an Associate Professor in Organizational Behavior at Stanford’s Graduate School of Business and studies job-person fit and humans using cutting-edge computational methods.</h6>
-                        <a href="">Read More...</a>
+                        <h1>{companyLeaderData.manager}</h1>
+                        <p>{companyLeaderData.managerDescription}</p>
+                        <h6>{companyLeaderData.managerDescription}</h6>
+                        <a href="./">{companyLeaderData.link}</a>
                         <div className="company-icons">
-                            <a href=""><img src="./company-leadership/fb.svg" alt="icons"/></a>
-                            <a href=""><img src="./company-leadership/tw.svg" alt="icons"/></a>
-                            <a href=""><img src="./company-leadership/ln.svg" alt="icons"/></a>
-                            <a href=""><img src="./company-leadership/ig.svg" alt="icons"/></a>
+                            {companyLeaderData.socialIcons.map((item) => (
+                                <a href="./"><img src={item.imgLink} alt={item.imgName}/></a>    
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className="paragraph">
-                    <p>Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.. </p>
+                    <p>{companyLeaderData.paragraph1}</p>
                     <br/>
                     <p>
-                        Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.
+                        {companyLeaderData.paragraph2}
                     </p>
                     <br/> 
-                       <p> Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.Our FirstWave support engineers are highly skilled and experienced in NMIS, Open-AudIT and all of our commercial products and helped customers from Telcos, MSP, enterprise organisations.</p>
+                       <p>{companyLeaderData.paragraph3}</p>
                 </div>
             </section>
     {/* <!-- company manager home page End -->
@@ -38,10 +38,10 @@ function CompanyLeadership(){
     <!-- manager-msg section start --> */}
             <section className="manager-quote">
                 <div className="message">
-                    <h1>Quotes</h1>
-                    <p>We had an incredible experience working with Landify and were <br/> impressed they made such a big difference in only three weeks. Our <br/> team is so grateful for the wonderful improvements they made and their <br/> ability to get familiar with the product concept so quickly. It acted as a <br/> catalyst to take our design to the next level and get more eyes on our <br/> product.</p>
-                    <h3>Scarlett Johansson</h3>
-                    <h6>Manager</h6>
+                    <h1>{companyLeaderData.quotesMsg}</h1>
+                    <p> {companyLeaderData.msgText1} <br/> {companyLeaderData.msgText2} <br/> {companyLeaderData.msgText3} <br/> {companyLeaderData.msgText4} <br/> {companyLeaderData.msgText5} <br/>  {companyLeaderData.msgText6}</p>
+                    <h3>{companyLeaderData.managerName}</h3>
+                    <h6>{companyLeaderData.post}</h6>
 
                     <div className="mark">
                         <img src="./company-leadership/quotes.svg" alt="" />

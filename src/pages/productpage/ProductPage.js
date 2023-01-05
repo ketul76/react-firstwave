@@ -1,22 +1,20 @@
 import './product-style.css';
  
-function ProductPage(){
+function ProductPage({productData}){
     return(
         <>
                     {/* <!-- Home Section --> */}
 
 <section className="product-home">
     <div className="home-intro">
-        <h6>Network Management Product</h6>
-        <h1>NMIS 9</h1>
-        <h3> The backbone of your network <br/> management system. </h3>
+        <h6>{productData.productTitle}</h6>
+        <h1>{productData.productName}</h1>
+        <h3> {productData.productIntro1} <br/> {productData.productIntro2}</h3>
         <p>
-            Network Management Information System <br/> (NMIS) is the robust software platform <br/> underpinning
-            Opmantek Performance and <br/> Management solutions.</p>
+            {productData.productParagraph1} <br/> {productData.productParagraph2} <br/> {productData.productParagraph3} <br/> {productData.productParagraph4}</p>
         <div className="home-btns">
-            <button className="download-btn">Free Download</button>
-
-            <button className="demo-btn">Book a Demo</button>
+            <button className="download-btn">{productData.productBtn1}</button>
+            <button className="demo-btn">{productData.productBtn2}</button>
         </div>
     </div>
 
@@ -36,27 +34,17 @@ function ProductPage(){
 {/* <!-- Company Section Start --> */}
 
 <section className="our-customer-companies">
-    <h4>Trusted By over 150,000 Companies including:</h4>
+    <h4>{productData.productListIntro}</h4>
     <div className="companies">
         <div className="companies-list">
-
-            <img src="./product-images/companies/bloomberg.svg" alt="bloomberg"/>
-            <img src="./product-images/companies/standford.svg" alt="standford"/>
-            <img src="./product-images/companies/cambr/idge.svg" alt="cambr/idge"/>
-            <img src="./product-images/companies/microsoft.svg" alt="microsoft"/>
-            <img src="./product-images/companies/ETh.svg" alt="ETh"/>
-            <img src="./product-images/companies/stitch.svg" alt="stitch"/>
-
-
+            {productData.productCompanyList1.map((item) => (
+            <img src={item.imgLink} alt={item.imgName}/>
+            ))}
         </div>
         <div className="companies-list">
-
-            <img src="./product-images/companies/google.svg" alt="google"/>
-            <img src="./product-images/companies/opengv.svg" alt="opengv"/>
-            <img src="./product-images/companies/allgero.svg" alt="allgero"/>
-            <img src="./product-images/companies/amazone.svg" alt="amazone"/>
-            <img src="./product-images/companies/circleup.svg" alt="circleup"/>
-            <img src="./product-images/companies/yellowlogo.svg" alt="yellowlogo"/>
+            {productData.productCompanyList2.map((item) => (
+            <img src={item.imgLink} alt={item.imgName}/>
+            ))}
 
         </div>
     </div>
@@ -68,42 +56,36 @@ function ProductPage(){
 {/* <!-- product-feature section Start --> */}
 
 <section className="productfeatures">
-    <h4>Why Top Companies use NMIS 9</h4>
+    <h4>{productData.productFeatureTitle}</h4>
     <div className="product-features">
         <div className="product-feature-lists">
-            <div className="products">
-                <img src="./product-images/product-feature/car-engine1.svg" alt="car-engine1"/>
-                <h2>Sophisticated Business Rules</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div className="products">
-                <img src="./product-images/product-feature/think-out-of-the-box1.svg" alt="car-engine1" />
-                <h2>Pre-Configured Out-of-the-</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div className="products">
-                <img src="./product-images/product-feature/maximize1.svg" alt="car-engine1" />
-                <h2>Massively Scalable</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
+        {productData.product1.map((item) => (
+              <div className={item.className}>
+              <img
+                src={item.imgLink}
+                alt=""
+              />
+              <h2>{item.buisnessText}</h2>
+              <p>
+                {item.buisnessIntro}
+              </p>
+            </div>  
+            ))}
         </div>
 
         <div className="product-feature-lists product-list2">
-            <div className="products">
-                <img src="./product-images/product-feature/visibility1.svg" alt="car-engine1" />
-                <h2>Visible Operational Impact</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div className="products">
-                <img src="./product-images/product-feature/heart-monitoring1.svg" alt="car-engine1" />
-                <h2>Automated Health Live</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div className="products">
-                <img src="./product-images/product-feature/setting1.svg" alt="car-engine1" />
-                <h2>Customizable Alert Escalation </h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
+        {productData.product2.map((item) => (
+              <div className={item.className}>
+              <img
+                src={item.imgLink}
+                alt=""
+              />
+              <h2>{item.buisnessText}</h2>
+              <p>
+                {item.buisnessIntro}
+              </p>
+            </div>  
+            ))}
         </div>
     </div>
 </section>
@@ -197,28 +179,23 @@ function ProductPage(){
 
 <section className="support">
     <div className="support-text">
-        <h3>Premium Support</h3>
-        <h4>Our FirstWave support engineers are highly skilled <br/> and experienced in NMIS, Open-AudIT and all
-            of
-            our <br/> commercial products and helped customers from <br/> Telcos, MSP, enterprise organisations.
+        <h3>{productData.support}</h3>
+        <h4>{productData.supportText1} <br/> {productData.supportText2} <br/> {productData.supportText3} <br/> {productData.supportText4}
         </h4>
         <h4 className="support-paragraph">
-            We work closely with you during implementation and rollout, as well as post delivery of our
-            solutions.
+            {productData.supportParagraph}
         </h4>
         <div className="demo-btn">
-            <button>Go to Support</button>
+            <button>{productData.demoBtn}</button>
         </div>
     </div>
 
     <div className="support-img">
-        <div className="suport-img1">
-            <img src="./product-images/support-img1.svg" alt=""/>
-        </div>
-
-        <div className="suport-img2">
-            <img src="./product-images/support-img2.svg" alt=""/>
-        </div>
+        {productData.supportImgs.map((item) => (
+            <div className={item.class}>
+              <img src={item.imgLink} alt=""/>
+            </div>
+        ))}
     </div>
 </section>
 {/* <!-- Our Support Section End --> */}
@@ -227,76 +204,53 @@ function ProductPage(){
 <section className="download-nmis-page">
     <div className="download-page">
         <div className="download-info">
-            <h4>Download NMIS</h4>
-            <p>NMIS (Network Management Information System) is an open-source network management system that was
-                first released in 1998.</p>
-            <h3><a href="">Download dataSheet</a></h3>
+            <h4>{productData.downloadTitle}</h4>
+            <p>{productData.downloadIntro}</p>
+            <h3><a href="">{productData.downloadLink}</a></h3>
 
             <div className="download-btn1">
                 <div className="radio">
                     <input type="radio" id="one" name="download"/>
-                    <label for="one">Download NMIS 9.3.0</label>
+                    <label for="one">{productData.downloadLabel1}</label>
                 </div>
-                <p><a href="">View Documentation</a></p>
+                <p><a href="">{productData.documentationLink1}</a></p>
             </div>
 
             <div className="download-btn1">
                 <div className="radio">
                     <input type="radio" id="two" name="download"/>
-                    <label for="two">Download NMIS 8.8.0</label>
+                    <label for="two">{productData.downloadLabel2}</label>
                 </div>
-                <p><a href="">View Documentation</a></p>
+                <p><a href="">{productData.documentationLink2}</a></p>
             </div>
 
             <div className="download-btn1">
                 <div className="radio">
                     <input type="radio" id="three" name="download"/>
-                    <label for="three">NMIS Source (GitHub)</label>
+                    <label for="three">{productData.downloadLabel3}</label>
                 </div>
-                <p><a href="">View Documentation</a></p>
+                <p><a href="">{productData.documentationLink3}</a></p>
             </div>
 
-            <label for="">email</label><br/>
+            <label for="">{productData.emailLabel}</label><br/>
             <input className="email" type="email" placeholder="your@gmail.com"/>
             <br/>
             <div className="download-checkbox">
-                <input type="checkbox" />Apply all Terms and conditions
+                <input type="checkbox" />{productData.checkboxName}
             </div>
             <br/>
-            <button className="download-btn">Download</button>
+            <button className="download-btn">{productData.downloadBtn}</button>
         </div>
 
         <div className="frequenty-que">
-            <h1>FAQ</h1>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt=""/>
+            <h1>{productData.faq}</h1>
+            {productData.queAns.map((item) => (
+                <div className={item.class}>
+                <p>{item.text}</p>
+                <img src={item.imgLink} alt=""/>
             </div>
-            <hr/>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt=""/>
-            </div>
-            <hr/>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt="" />
-            </div>
-            <hr/>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt="" />
-            </div>
-            <hr/>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt="" />
-            </div>
-            <hr/>
-            <div className="faq">
-                <p>What does NMIS stand for?</p>
-                <img src="./product-images/down-arrow.svg" alt=""/>
-            </div>
+            ))}
+           
         </div>
     </div>
 </section>
@@ -313,23 +267,20 @@ function ProductPage(){
         </div>
 
         <div className="download-info2">
-            <h4>Download NMIS</h4>
-            <p>NMIS (Network Management Information System) is an open-source network management system that was
-                first released in 1998.</p>
-            <h3><a href="">Download dataSheet</a></h3>
+            <h4>{productData.downloadTitle2}</h4>
+            <p>{productData.downloadIntro2}</p>
+            <h3><a href="./">{productData.downloadLink}</a></h3>
             <div className="our-support">
-                <div className="our-support1">
-                    <img src="./product-images/support.svg" alt="" />
-                    <h2>Community Support</h2>
-                    <p>Community Support is also available for all open source users.</p>
-                    <button>Join</button>
+                {productData.ourSupport.map((item) => (
+                <div className={item.class}>
+                    <img src={item.imgLink} alt="" />
+                    <h2>{item.supportText1}</h2>
+                    <p>
+                        {item.supportText2}
+                    </p>
+                    <button>{item.joinBtn}</button>
                 </div>
-                <div className="our-support1">
-                    <img src="./product-images/github.svg" alt="" />
-                    <h2>NMIS on GitHub</h2>
-                    <p>Track the NMIS development changes on GitHub.</p>
-                    <button>Join</button>
-                </div>
+                ))}
             </div>
         </div>
     </div>

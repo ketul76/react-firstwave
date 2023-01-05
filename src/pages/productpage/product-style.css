@@ -510,7 +510,7 @@ li a {
         border-radius: 14px;
         padding: 24px;
     }
-    .faq{
+    .frequenty-que .faq{
         display: flex;
         gap: 200px;
         align-items: center;
@@ -586,7 +586,7 @@ li a {
         padding-bottom: 35px;
         padding-top: 50px;
     }
-    .faq p{
+    .frequenty-que .faq p{
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -1208,7 +1208,7 @@ text-align: right;
     .download-info button{
         width: 100%;
     }
-    .faq{
+    .frequenty-que .faq{
         gap: 0;
     }
     .downloadimg img{

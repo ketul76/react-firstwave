@@ -1,32 +1,26 @@
 import React from "react";
 import './latestnews.css';
 
-function LatestNews(){
+function LatestNews({latestNewsData}){
     return(
         <>
              {/* <!-- latest news Section start --> */}
     <section className="latest-news">
         <div className="latest-title">
-            <h1>Latest news</h1>
-            <a href="">see all news</a>
+            <h1>{latestNewsData.title}</h1>
+            <a href="/">{latestNewsData.link}</a>
         </div>
         <div className="latestnews">
-            <div className="news">
-                <img src="./latest-news-images/news1.svg" alt="" />
+            {latestNewsData.news.map((item) => (
+                <div className={item.class}>
+                <img src={item.imgLink} alt="" />
                 <div className="news-text">
-                    <h3>Michal Kosinski is an Associate <br/> Professor in Organizational.</h3>
-                    <p>We’re a team made up of individuals, with unconventional career paths military ... </p>
-                    <a href="">Read More...</a>
+                    <h3>{item.name1} <br/> {item.name2}</h3>
+                    <p>{item.intro}</p>
+                    <a href="./">{item.link}</a>
                 </div>
-            </div>
-            <div className="news">
-                <img src="./latest-news-images/news2.svg" alt=""/>
-                <div className="news-text">
-                    <h3>Michal Kosinski is an Associate <br/> Professor in Organizational.</h3>
-                    <p>We’re a team made up of individuals, with unconventional career paths military ... </p>
-                    <a href="">Read More...</a>
-                </div>
-            </div>
+            </div>    
+            ))}
         </div>
         <div className="arrows">
             <img src="./latest-news-images/leftarrow.svg" alt="" />
@@ -42,68 +36,31 @@ function LatestNews(){
                 </div>
      
                      <div className="blog-header">
-                         <h2>Blogs</h2>
+                         <h2>{latestNewsData.blogsTitle}</h2>
                         <div className="blogs-btn">
-                             <button>Blogs</button>
-                             <button>Webinars</button>
-                             <button>Enterprise</button>
-                             <button>Prodcasts</button>
-                             <button>White Papers</button>
-                             <button>Case Studies</button>
+                             {latestNewsData.blogsBtns.map((item) => (
+                                <button>{item}</button>
+                             ))}
+                             
                         </div>
                      </div>
      
                      <div className="blogs-all-cards ">
-                         <div className="all-cards ">
-                             <img src="./blog-images/blog-1.svg" alt=""/>
-                             <h3>Reasoning Ability</h3>
-                             <p>Check your reasoning abilities.</p>
-                             <p>Discover the top traits that help you excel and determine your work fit.</p>
-                             <div className="read-more">
-                                <div className="right-arrow">
-                                 <button>Read More</button>
-                                 <img className="readmore" src="./blog-images/readmore.svg" alt=""/>
-                                </div>
-                                <p>30 Min</p>
-                             </div>
-                         </div>
-                         <div className="all-cards ">
-                             <img src="./blog-images/blog-2.svg" alt=""/>
-                             <h3>Personality Assessment</h3>
-                             <p>Discover the top traits that help you excel and determine your work fit.</p>
-                             <p>Check your reasoning abilities.</p>
-                             <div className="read-more">
-                                <div className="right-arrow">
-                                 <button>Read More</button>
-                                 <img className="readmore" src="./blog-images/readmore.svg" alt=""/>
-                                </div>
-                                <p>30 Min</p>
-                             </div>
-                         </div>
-                         <div className="all-cards ">
-                             <img src="./blog-images/blog-3.svg" alt=""/>
-                             <h3>Cope Inventory</h3>
-                             <p>Discover the top traits that help you excel and determine your work fit.</p>
-                             <p>Check your reasoning abilities.</p>
-                             <div className="read-more">
-                                <div className="right-arrow">
-                                  <button>Read More</button>
-                                     <img className="readmore" src="./blog-images/readmore.svg" alt=""/>
-                                </div>
-                                <p>30 Min</p>
-                             </div>
-                         </div>
-                         <div className="all-cards1 ">
-                             <img src="./blog-images/blog-4.svg" alt=""/>
-                             <h3>Entrepreneurial Personality</h3>
-                             <p>Get a clean picture of yourself with insighhtsthis.</p>
-                             <div className="read-more">
-                                <div className="right-arrow">
-                                 <button>Read More</button>
-                                 <img className="readmore" src="./blog-images/readmore.svg" alt=""/>
-                                </div>
-                             </div>
-                         </div>
+                     {latestNewsData.blogsCards.map((item) => (
+                    <div className={item.class}>
+                        <img src={item.imgLink} alt="" />
+                        <h3>{item.blogTitle}</h3>
+                        <p>{item.text1}</p>
+                        <p>{item.text2}</p>
+                        <div className="read-more">
+                           <div className="right-arrow">
+                            <button>{item.btn}</button>
+                            <img className={item.imgClass} src={item.imgLink2} alt="" />
+                           </div>
+                           <p>{item.time}</p>
+                        </div>
+                    </div>    
+                    ))}
                      </div>
      
                 <div className="Ellipse2">

@@ -1,6 +1,6 @@
 import './postpage.css';
 
-function PostPage(){
+function PostPage({postData}){
     return(
         <>
 {/* <!-- Main Part Start -->
@@ -9,13 +9,11 @@ function PostPage(){
       <section className="Home">
         <div className="homes">
           <div className="hometext">
-            <h1>Using Configuration <br/> Management to <br/> Detect Unwanted <br/> Software</h1>
+            <h1>{postData.postTitle1} <br/> {postData.postTitle2} <br/> {postData.postTitle3} <br/> {postData.postTitle4}</h1>
             <p>
-              Lorem Ipsum do eiusmod tempor incididunt ut <br/> labore et dolore magna
-              aliqua. Ut enim ad minim nostrud <br/> exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo <br/> consequat.
+              {postData.postParagraph1} <br/> {postData.postParagraph2} <br/>{postData.postParagraph3} <br/> {postData.postParagraph4}
             </p>
-            <h6>by Emily Coe</h6>
+            <h6>{postData.postMsg}</h6>
           </div>
 
           <div className="homeimg">
@@ -34,28 +32,28 @@ function PostPage(){
             <div className="questions-subscribe">
                 <div className="questions">
                     <div className="answer-questions">
-                        <h3>Is the Log4Shell or Log4J vulnerability an issue for Opmantek?</h3>
-                        <p>No. Opmantek products do not use Java or Log4J, see more details here: <span><a href="">Opmantek <br/>  Products and Apache Log4J Vulnerability.</a> </span></p>
+                        <h3>{postData.ansQueTitle1}</h3>
+                        <p>{postData.ansQueParagraph1} <span><a href="./"> {postData.link1} <br/>  {postData.link2}</a> </span></p>
                     </div>
                     <div className="answer-questions">
-                        <h3>What is the Log4Shell Vulnerability? </h3> 
-                        <p>The Log4Shell is a zero-day vulnerability in Log4J, which allows attackers to execute <br/> arbitrary Java code on the remote computers, including accessing sensitive <br/> information.  The CVSS score is 10, the highest possible score.  You can read more <br/> details here: <span> <a href=""> Log4Shell – Wikipedia.</a> </span></p>
+                        <h3>{postData.ansQueTitle2}</h3> 
+                        <p>{postData.ansQueParagraph2} <br/> {postData.ansQueParagraph3} <br/> {postData.ansQueParagraph4} <br/> {postData.ansQueParagraph5} <span> <a href="./"> {postData.link3}</a> </span></p>
                     </div>
                     <div className="answer-questions">
-                        <h3>What is Apache Log4J?</h3>
-                        <p>Apache Log4J is a popular libr/ary used by many products written in Java.  It provides a <br/> consistent way for applications to log messages including information, debug, errors, <br/>  etc.  It has become the primary way Java applications do logging and is widely used.</p>
+                        <h3>{postData.ansQueTitle3}</h3>
+                        <p>{postData.ansQueParagraph6}<br/> {postData.ansQueParagraph7} <br/>  {postData.ansQueParagraph8}</p>
                     </div>
                     <div className="answer-questions">
-                        <h3>How can Opmantek help you find computers that are using Log4J?</h3>
-                        <p>Log4J is a Java libr/ary which means that there are files installed onto the computer <br/> which Java loads when it runs the program.  You can search for these files using Linux <br/> commands and determine if the files exist on the server.</p>
+                        <h3>{postData.ansQueTitle4}</h3>
+                        <p>{postData.ansQueParagraph9} <br/> {postData.ansQueParagraph10} <br/> {postData.ansQueParagraph11}</p>
                     </div>
                 </div>
                 <div className="subscribe">
-                    <h4>Stay up to Date</h4>
-                    <label for="email">Email</label><br/>
+                    <h4>{postData.subscribeTitle}</h4>
+                    <label for="email">{postData.emailLabel}</label><br/>
                     <input type="email" placeholder="enter your email" id="email"/><br/>
                     <div className="subscribe-btn">
-                        <button type="submit">Subscribe</button>
+                        <button type="submit">{postData.subscribeBtn}</button>
                     </div>
                 </div>
             </div>
@@ -70,68 +68,30 @@ function PostPage(){
             </div>
  
                  <div className="blog-header">
-                     <h2>Blogs</h2>
+                     <h2>{postData.blogsTitle}</h2>
                     <div className="blogs-btn">
-                         <button>Blogs</button>
-                         <button>Webinars</button>
-                         <button>Enterprise</button>
-                         <button>Prodcasts</button>
-                         <button>White Papers</button>
-                         <button>Case Studies</button>
+                    {postData.blogsBtns.map((item) => (
+                        <button>{item}</button>
+                    ))}
                     </div>
                  </div>
  
                  <div className="blogs-all-cards ">
-                     <div className="all-cards ">
-                         <img src="./blog-images/blog-1.svg" alt=""/>
-                         <h3>Reasoning Ability</h3>
-                         <p>Check your reasoning abilities.</p>
-                         <p>Discover the top traits that help you excel and determine your work fit.</p>
-                         <div className="read-more">
-                            <div className="right-arrow">
-                             <button>Read More</button>
-                             <img className="readmore" src="./blog-images/readmore.svg" alt="" />
-                            </div>
-                            <p>30 Min</p>
-                         </div>
-                     </div>
-                     <div className="all-cards ">
-                         <img src="./blog-images/blog-2.svg" alt="" />
-                         <h3>Personality Assessment</h3>
-                         <p>Discover the top traits that help you excel and determine your work fit.</p>
-                         <p>Check your reasoning abilities.</p>
-                         <div className="read-more">
-                            <div className="right-arrow">
-                             <button>Read More</button>
-                             <img className="readmore" src="./blog-images/readmore.svg" alt="" />
-                            </div>
-                            <p>30 Min</p>
-                         </div>
-                     </div>
-                     <div className="all-cards ">
-                         <img src="./blog-images/blog-3.svg" alt="" />
-                         <h3>Cope Inventory</h3>
-                         <p>Discover the top traits that help you excel and determine your work fit.</p>
-                         <p>Check your reasoning abilities.</p>
-                         <div className="read-more">
-                            <div className="right-arrow">
-                              <button>Read More</button>
-                                 <img className="readmore" src="./blog-images/readmore.svg" alt="" />
-                            </div>
-                            <p>30 Min</p>
-                         </div>
-                     </div>
-                     <div className="all-cards1 ">
-                         <img src="./blog-images/blog-4.svg" alt="" />
-                         <h3>Entrepreneurial Personality</h3>
-                         <p>Get a clean picture of yourself with insighhtsthis.</p>
-                         <div className="read-more">
-                            <div className="right-arrow">
-                             <button>Read More</button>
-                             <img className="readmore" src="./blog-images/readmore.svg" alt="" />
-                            </div>
-                         </div>
-                     </div>
+                 {postData.blogsCards.map((item) => (
+                    <div className={item.class}>
+                        <img src={item.imgLink} alt="" />
+                        <h3>{item.blogTitle}</h3>
+                        <p>{item.text1}</p>
+                        <p>{item.text2}</p>
+                        <div className="read-more">
+                           <div className="right-arrow">
+                            <button>{item.btn}</button>
+                            <img className={item.imgClass} src={item.imgLink2} alt="" />
+                           </div>
+                           <p>{item.time}</p>
+                        </div>
+                    </div>    
+                    ))}
                  </div>
  
             <div className="Ellipse2">

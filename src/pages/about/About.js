@@ -1,7 +1,7 @@
 import React from "react";
 import './about.css';
 
-function About(){
+function About({aboutData}){
     return(
     <>
 
@@ -10,20 +10,20 @@ function About(){
       <section className="about-us">
         <div className="aboutuspages">
           <div className="about-page-texts">
-            <h1>About Us</h1>
+            <h1>{aboutData.pageName}</h1>
             <h4>
-              Who are we? Opmantek is a team <br />
-              of talented individuals working together to <br />
-              make software people love.
+              {aboutData.pageIntro1}<br />
+              {aboutData.pageIntro2} <br />
+              {aboutData.pageIntro3}
             </h4>
             <p>
-              We develop multi-award winning <br />
-              enterprise-className software that helps IT <br />
-              teams audit IT environments.
+              {aboutData.aboutText1} <br />
+              {aboutData.aboutText2} <br />
+              {aboutData.aboutText3}
             </p>
             <div className="demo-btn about-btns">
-              <button>Contact Us</button>
-              <button className="book-demo">Book a Demo</button>
+              <button>{aboutData.contactBtn}</button>
+              <button className="book-demo">{aboutData.bookBtn}</button>
             </div>
           </div>
           <div className="about-images">
@@ -36,161 +36,61 @@ function About(){
       </section>
 
       <section className="our-locations">
-        <h1>Locations</h1>
+        <h1>{aboutData.location}</h1>
         <div className="ourlocations">
           <div className="allLocation">
-            <div className="location">
+            {aboutData.locationList1.map((item) => (
+              <div className={item.class}>
               <img
                 className="mainimg"
-                src="./aboutus-images/locations/location-1.svg"
+                src={item.imglink}
                 alt=""
               />
               <div className="locationtext">
-                <h3>Head Office and USA West Coast</h3>
+                <h3>{item.locationTitle}</h3>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
+                  <img src={item.callimglink} alt="" />
+                  <p>{item.phoneNumber}</p>
                 </div>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
+                  <img src={item.msgLink} alt="" />
+                  <p>{item.email}</p>
                 </div>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
+                  <img src={item.addressLink} alt="" />
+                  <p>{item.address}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="location">
-              <img
-                className="mainimg"
-                src="./aboutus-images/locations/location-2.svg"
-                alt=""
-              />
-              <div className="locationtext">
-                <h3></h3>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="location">
-              <img
-                className="mainimg"
-                src="./aboutus-images/locations/location-3.svg"
-                alt=""
-              />
-              <div className="locationtext">
-                <h3>Head Office and USA West Coast</h3>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="allLocation">
-            <div className="location">
+          {aboutData.locationList2.map((item) => (
+              <div className={item.class}>
               <img
                 className="mainimg"
-                src="./aboutus-images/locations/location-4.svg"
+                src={item.imglink}
                 alt=""
               />
               <div className="locationtext">
-                <h3>Head Office and USA West Coast</h3>
+                <h3>{item.locationTitle}</h3>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
+                  <img src={item.callimglink} alt="" />
+                  <p>{item.phoneNumber}</p>
                 </div>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
+                  <img src={item.msgLink} alt="" />
+                  <p>{item.email}</p>
                 </div>
                 <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
+                  <img src={item.addressLink} alt="" />
+                  <p>{item.address}
                   </p>
                 </div>
               </div>
             </div>
-            <div className="location">
-              <img
-                className="mainimg"
-                src="./aboutus-images/locations/location-5.svg"
-                alt=""
-              />
-              <div className="locationtext">
-                <h3>Head Office and USA West Coast</h3>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="location">
-              <img
-                className="mainimg"
-                src="./aboutus-images/locations/location-6.svg"
-                alt=""
-              />
-              <div className="locationtext">
-                <h3>Head Office and USA West Coast</h3>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/call.svg" alt="" />
-                  <p>+1 (415) 322 2479</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/message.svg" alt="" />
-                  <p>contact@opmantek.com</p>
-                </div>
-                <div className="contacts-address">
-                  <img src="./aboutus-images/location.svg" alt="" />
-                  <p>
-                    One Harbor Drive, Suite 300, Sausalito, CA, 94965 United
-                    States of America
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -200,38 +100,23 @@ function About(){
       <!-- Company Section Start --> */}
 
       <section className="our-customer-companies">
-        <h4>Trusted By over 150,000 Companies including:</h4>
+        <h4>{aboutData.companyListIntro}</h4>
         <div className="companies">
           <div className="companies-list">
-            <img
-              src="./product-images/companies/bloomberg.svg"
-              alt="bloomberg"
-            />
-            <img
-              src="./product-images/companies/standford.svg"
-              alt="standford"
-            />
-            <img
-              src="./product-images/companies/cambridge.svg"
-              alt="cambridge"
-            />
-            <img
-              src="./product-images/companies/microsoft.svg"
-              alt="microsoft"
-            />
-            <img src="./product-images/companies/ETh.svg" alt="ETh" />
-            <img src="./product-images/companies/stitch.svg" alt="stitch" />
+            {aboutData.companyList1.map((item) => (
+              <img
+              src={item.imgLink}
+              alt={item.imgName}
+            />  
+            ))}
           </div>
           <div className="companies-list">
-            <img src="./product-images/companies/google.svg" alt="google" />
-            <img src="./product-images/companies/opengv.svg" alt="opengv" />
-            <img src="./product-images/companies/allgero.svg" alt="allgero" />
-            <img src="./product-images/companies/amazone.svg" alt="amazone" />
-            <img src="./product-images/companies/circleup.svg" alt="circleup" />
-            <img
-              src="./product-images/companies/yellowlogo.svg"
-              alt="yellowlogo"
-            />
+          {aboutData.companyList2.map((item) => (
+              <img
+              src={item.imgLink}
+              alt={item.imgName}
+            />  
+            ))}
           </div>
         </div>
       </section>
@@ -241,78 +126,36 @@ function About(){
       <!-- product-feature section Start --> */}
 
       <section className="productfeatures">
-        <h4>Why Top Companies use NMIS 9</h4>
+        <h4>{aboutData.productFeatureTitle}</h4>
         <div className="product-features">
           <div className="product-feature-lists">
-            <div className="products">
+            {aboutData.product1.map((item) => (
+              <div className={item.className}>
               <img
-                src="./product-images/product-feature/car-engine1.svg"
-                alt="car-engine1"
+                src={item.imgLink}
+                alt=""
               />
-              <h2>Sophisticated Business Rules</h2>
+              <h2>{item.buisnessText}</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
+                {item.buisnessIntro}
               </p>
-            </div>
-            <div className="products">
-              <img
-                src="./product-images/product-feature/think-out-of-the-box1.svg"
-                alt="car-engine1"
-              />
-              <h2>Pre-Configured Out-of-the-</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
-              </p>
-            </div>
-            <div className="products">
-              <img
-                src="./product-images/product-feature/maximize1.svg"
-                alt="car-engine1"
-              />
-              <h2>Massively Scalable</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
-              </p>
-            </div>
+            </div>  
+            ))}
           </div>
 
           <div className="product-feature-lists product-list2">
-            <div className="products">
+            {aboutData.product2.map((item) => (
+              <div className={item.className}>
               <img
-                src="./product-images/product-feature/visibility1.svg"
-                alt="car-engine1"
+                src={item.imgLink}
+                alt=""
               />
-              <h2>Visible Operational Impact</h2>
+              <h2>{item.buisnessText}</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
+                {item.buisnessIntro}
               </p>
-            </div>
-            <div className="products">
-              <img
-                src="./product-images/product-feature/heart-monitoring1.svg"
-                alt="car-engine1"
-              />
-              <h2>Automated Health Live</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
-              </p>
-            </div>
-            <div className="products">
-              <img
-                src="./product-images/product-feature/setting1.svg"
-                alt="car-engine1"
-              />
-              <h2>Customizable Alert Escalation</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                erat nibh tristique ipsum.
-              </p>
-            </div>
+            </div>  
+            ))}
           </div>
         </div>
       </section>
@@ -325,60 +168,41 @@ function About(){
         <div className="story">
           <div className="storysections">
             <div className="storytext">
-              <h1>Our story</h1>
+            <h1>Our story</h1>
               <h3>
-                Our FirstWave support engineers are highly skilled <br />
-                and experienced in NMIS, Open-AudIT and all of our <br />
-                commercial products and helped customers from <br />
-                Telcos, MSP, enterprise organisations.
+                  {aboutData.storyparagraph1}<br />
+                  {aboutData.storyparagraph2}<br />
+                  {aboutData.storyparagraph3}<br />
+                  {aboutData.storyparagraph4}
               </h3>
               <h4>
-                We work closely with you during implementation <br />
-                and rollout, as well as post delivery of our solutions. <br />
-                as well as post delivery of our solutions.
+                {aboutData.storyparagraph5}   <br />
+                {aboutData.storyparagraph6} <br />
+                {aboutData.storyparagraph7}
               </h4>
             </div>
             <div className="story-img">
               <img src="./aboutus-images/story-img.svg" alt="" />
             </div>
           </div>
-
           <p>
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.Our FirstWave
-            support engineers are highly skilled and experienced in NMIS,
-            Open-AudIT and all of our commercial products and helped customers
-            from Telcos, MSP, enterprise organisations..
+          {aboutData.ourStoryText1}
           </p>
           <br />
           <p>
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.
+          {aboutData.ourStoryText2}
           </p>
           <br />
           <p>
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.Our FirstWave
-            support engineers are highly skilled and experienced in NMIS,
-            Open-AudIT and all of our commercial products and helped customers
-            from Telcos, MSP, enterprise organisations.Our FirstWave support
-            engineers are highly skilled and experienced in NMIS, Open-AudIT and
-            all of our commercial products and helped customers from Telcos,
-            MSP, enterprise organisations.
+          {aboutData.ourStoryText3}
           </p>
           <br />
           <p>
-            Our FirstWave support engineers are highly skilled and experienced
-            in NMIS, Open-AudIT and all of our commercial products and helped
-            customers from Telcos, MSP, enterprise organisations.
+          {aboutData.ourStoryText4}
           </p>
           <br />
           <p>
-            We’re tired with recruiting and we know it can be done better. We’re
-            starting with juniors and tech.
+            {aboutData.ourStoryText5}
           </p>
         </div>
       </section>
@@ -387,41 +211,25 @@ function About(){
 
       <!-- meet our teams start --> */}
       <section className="teams">
-        <h1>Meet Our Team Leaders</h1>
+        <h1>{aboutData.ourTeamTitle}</h1>
         <div className="our-teams">
           <div className="team">
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-1.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>General Manager</h3>
+            {aboutData.teamsList1.map((item) => (
+            <div className={item.class}>
+              <img src={item.imgLink} alt="" />
+              <h2>{item.name}</h2>
+              <h3>{item.post}</h3>
             </div>
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-2.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>Community Manager</h3>
-            </div>
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-3.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>Community Manager</h3>
-            </div>
+            ))}
           </div>
           <div className="team">
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-4.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>General Manager</h3>
+          {aboutData.teamsList2.map((item) => (
+            <div className={item.class}>
+              <img src={item.imgLink} alt="" />
+              <h2>{item.name}</h2>
+              <h3>{item.post}</h3>
             </div>
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-5.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>Community Manager</h3>
-            </div>
-            <div className="member">
-              <img src="./aboutus-images/our-team/member-6.svg" alt="" />
-              <h2>Michal Kosinski</h2>
-              <h3>Community Manager</h3>
-            </div>
+            ))}
           </div>
         </div>
       </section>

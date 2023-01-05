@@ -12,24 +12,25 @@ import PostPage from "./postpage/PostPage";
 import ProductPage from "./productpage/ProductPage";
 import Signin from "./signin/Signin";
 import SignUp from "./signup/SignUp";
+import data from "../data";
 
 function Layout(){
     const [activePage,setActivePage] = useState('home');
     return(
         <>
-        <Header activePage={activePage} setActivePage={setActivePage} />
-         {activePage === 'home' && <Home/>}
-         {activePage === 'about' && <About/>}
-         {activePage === 'blog' && <Blog/>}
-         {activePage === 'legal' && <Legal/>}
-         {activePage === 'post' && <PostPage/>}
-         {activePage === 'product' && <ProductPage/>}
+        {/* <Header activePage={activePage} setActivePage={setActivePage} />
+         {activePage === 'home' && <Home homeData = {data.homePage} />}
+         {activePage === 'about' && <About aboutData = {data.about} />}
+         {activePage === 'blog' && <Blog blogData = {data.blogPage}/>}
+         {activePage === 'legal' && <Legal legalData = {data.LegalPage}/>}
+         {activePage === 'post' && <PostPage postData = {data.postPage}/>}
+         {activePage === 'product' && <ProductPage productData = {data.productPage}/>}
          {activePage === 'signin' && <Signin/>}   
-        <Footer/>
+        <Footer/> */}
             {/* <SignUp/> */}
-            {/* <CompanyLeadership/> */}
-            {/* <Financial/> */}
-            {/* <LatestNews/> */}
+            {/* <CompanyLeadership  companyLeadershipData= {data.companyLeaderShipPage} /> */}
+            <Financial financialData = {data.financialPage} />
+            {/* <LatestNews latestNewsData = {data.latestNewsPage}/> */}
         </>
     )
 }

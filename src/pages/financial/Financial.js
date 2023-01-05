@@ -1,23 +1,24 @@
 import React from "react";
 import './financial.css';
 
-function Financial(){
+function Financial(props){
+    let finacial = props.financialData;
     return(
         <>
-            {/* <!-- main part start -->
+        {/* <!-- main part start -->
         <!-- home section start --> */}
         <section className="financial-home">
             <div className="financial-home-texts">
-                <h1>Financial Reporting</h1>
+                <h1>{finacial.title}</h1>
                 <h3>
-                    Opmantek prides itself on providing users <br />
-                    access to all their data.
+                    {finacial.text1} <br />
+                    {finacial.text2}
                 </h3>
                 <p>
-                    This begins with our products giving you all <br />
-                    the data on your network, but it extends to <br />
-                    any of your personal information. We pride <br />
-                    ourself on ensuring this is safe.
+                    {finacial.text3} <br />
+                    {finacial.text4} <br />
+                    {finacial.text5} <br />
+                    {finacial.text6}
                 </p>
             </div>
             <div className="financial-home-img">
@@ -28,35 +29,23 @@ function Financial(){
 
         {/* <!-- Annual Report Section Start --> */}
         <section className="annual-reports">
-            <h2>Annual Reports</h2>
+            <h2>{finacial.annualReportsTitle}</h2>
             <div className="reports-lists">
                 <div className="reports">
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
+                    {finacial.reports1.map((item) => (
+                        <div className={item.class}>
+                        <h3>{item.year}</h3>
+                        <p><span>|</span><a href="./">{item.link}</a></p>
+                    </div>    
+                    ))}
                 </div>
                 <div className="reports">
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
-                    <div className="yearly">
-                        <h3>2021</h3>
-                        <p><span>|</span><a href="">Download Report</a></p>
-                    </div>
+                {finacial.reports2.map((item) => (
+                        <div className={item.class}>
+                        <h3>{item.year}</h3>
+                        <p><span>|</span><a href="./">{item.link}</a></p>
+                    </div>    
+                    ))}
                 </div>
             </div>
         </section>
@@ -112,82 +101,24 @@ function Financial(){
             <h1>Corporate Governance</h1>
             <div className="corporate-governess-text">
                 <div className="text-about">
-                    <p>​The Board of FirstWave Cloud Technology Limited has been established to provide a blend of
-                        qualifications, skills <br/> and experience required to manage a company in a cloud-based
-                        technology environment. The Company’s aim <br/> in determining Board membership is to create a
-                        balanced and informed group to assist the Company in making <br/> decisions relating to all
-                        corporate and governance related matters. The Board’s primary responsibility is to the <br/>
-                        shareholders as owners of the Company. In recognition of its duty, it recognizes an important
-                        obligation to act in
-                        <br/> the best interests of the Company, act honestly, exercise care and due diligence and
-                        support a corporate <br/> governance initiative that fosters integrity.
+                    <p>​ {finacial.paragraphtext1} <br/> {finacial.paragraphtext2} <br/> {finacial.paragraphtext3} <br/> {finacial.paragraphtext4} <br/>
+                        {finacial.paragraphtext5} <br/> {finacial.paragraphtext6} <br/>
+                        {finacial.paragraphtext7}
                     </p>
                     <br/>
-                    <p>The Board seeks to ensure that the Company is properly managed to protect and enhance shareholder
-                        interests, <br/> and that the Company, its Directors, officers and personnel operate in an
-                        appropriate environment of good <br/> corporate governance. Accordingly, the Board has created a
-                        framework for managing the Company, including <br/> adopting relevant internal controls, risk
-                        management processes and corporate governance policies and <br/> practices which it believes are
-                        appropriate for the Company’s business and which are designed to promote the <br/> responsible
-                        management and conduct of the Company.</p>
+                    <p>{finacial.paragraphtext8} <br/> {finacial.paragraphtext9} <br/> {finacial.paragraphtext10} <br/> {finacial.paragraphtext11} <br/> {finacial.paragraphtext12} <br/> {finacial.paragraphtext13}</p>
                     <br/>
-                    <p>Copies of the Company’s key corporate governance policies and charters for the Board and each of
-                        its <br/> committees are available below.</p>
+                    <p>{finacial.copyText1} <br/> {finacial.copyText2}</p>
                 </div>
             </div>
             <div className="our-policies-download">
-                <h4>Corporate Governance Policies - (click on name to download)</h4>
-                <div className="policy-download"><input id="one" type="radio" name="policies"/>
-                    <label for="one">Appendix 4G and Corporate Governance</label>
-                </div>
-                <div className="policy-download">
-                    <input id="two" type="radio" checked name="policies"/>
-                    <label for="two">FCT Audit and Risk Committee Charter
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="three" type="radio" name="policies"/>
-                    <label for="three">FCT Board Charter
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="four" type="radio" name="policies"/>
-                    <label for="four">FCT Board Charter
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="five" type="radio" name="policies"/>
-                    <label for="five">FCT Code of Conduct
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="six" type="radio" name="policies"/>
-                    <label for="six">FCT Remuneration and Nomination Committee
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="seven" type="radio" name="policies"/>
-                    <label for="seven">FCT Securities Trading Policy
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="eight" type="radio" name="policies"/>
-                    <label for="eight">FCT Constitution
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="nine" type="radio" name="policies"/>
-                    <label for="nine">FCT Privacy Statement
-                    </label>
-                </div>
-                <div className="policy-download">
-                    <input id="ten" type="radio" name="policies"/>
-                    <label for="ten">FCT Anti-Bribery and Corruption Policy</label>
-                </div>
-                <div className="policy-download">
-                    <input id="eleven" type="radio" name="policies"/>
-                    <label for="eleven">FCT Whistleblower Policy</label>
-                </div>
+                <h4>{finacial.policyTitle}</h4>
+                {finacial.policies.map((item) => (
+                    <div className={item.class}>
+                    <input id="one" type="radio" name="policies"/>
+                    <label for="one">{item.label}</label>
+                </div>    
+                ))}
 
 
             </div>
