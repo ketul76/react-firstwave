@@ -164,7 +164,7 @@ li a {
 
 .allLocation {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     padding-bottom: 30px;
@@ -362,9 +362,9 @@ li a {
 
 .team {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 130px;
-    padding-bottom: 48px;
+    gap: 105px;
     text-align: center;
 }
 
@@ -401,34 +401,34 @@ li a {
 
 /* form and offer section start */
 
-.white-card {
+.partner-offer-and-form .white-card {
     height: 500px;
     display: flex;
     justify-content: center;
     gap: 70px;
     position: relative;
 }
-
-.offer-text {
+ 
+.partner-offer-and-form .offer-text {
     padding-top: 200px;
 }
 
-.blue-card {
+.partner-offer-and-form .blue-card {
     height: 200px;
     background: #1F384F;
 }
 
-.white-card form {
+.partner-offer-and-form .white-card form {
     width: 500px;
     height: 440px;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
-    /* margin-top: 130px; */
+    margin-top: 130px;
     padding: 18px 32px 18px 32px;
 }
 
-.offer-text h2 {
+.partner-offer-and-form .offer-text h2 {
     font-weight: 700;
     font-size: 46px;
     line-height: 56px;
@@ -436,7 +436,7 @@ li a {
     padding-bottom: 24px;
 }
 
-.offer-text p {
+.partner-offer-and-form .offer-text p {
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -444,18 +444,18 @@ li a {
     color: #575757;
 }
 
-.first-row {
+.partner-offer-and-form .first-row {
     display: flex;
     gap: 20px;
     padding-bottom: 16px;
 }
 
-.first-row input {
+.partner-offer-and-form .first-row input {
     width: 207px;
     height: 48px;
 }
 
-.white-card form label {
+.partner-offer-and-form .white-card form label {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -464,7 +464,7 @@ li a {
     color: #515458;
 }
 
-.white-card form input[type="text"] {
+.partner-offer-and-form .white-card form input[type="text"] {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -474,7 +474,7 @@ li a {
     padding: 8px;
 }
 
-.white-card form input {
+.partner-offer-and-form .white-card form input {
     background: #FFFFFF;
     border: 1px solid #B7BFC7;
     border-radius: 5px;
@@ -482,11 +482,11 @@ li a {
     height: 48px;
 }
 
-.form-control {
+.partner-offer-and-form .form-control {
     padding-bottom: 16px;
 }
 
-::placeholder {
+.partner-offer-and-form ::placeholder {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -496,13 +496,13 @@ li a {
     padding: 8px;
 }
 
-.btn-privacy {
+.partner-offer-and-form .btn-privacy {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.form-btn {
+.partner-offer-and-form .form-btn {
     background: rgba(0, 112, 240, 0.9);
     border: 1px solid rgba(0, 112, 240, 0.9);
     border-radius: 30px;
@@ -510,12 +510,12 @@ li a {
     color: #FFFFFF;
 }
 
-.blue-card {
+.partner-offer-and-form .blue-card {
     position: relative;
     z-index: -1;
 }
 
-.blue-circle {
+.partner-offer-and-form .blue-circle {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -872,7 +872,7 @@ footer {
         padding: 10px;
     }
 
-    .white-card {
+    .partner-offer-and-form .white-card {
         height: 100%;
         flex-direction: column;
         gap: 0;
@@ -880,18 +880,18 @@ footer {
         align-items: center;
         padding: 25px;
     }
-    .square1{
+    .partner-offer-and-form .square1{
         display: none;
     }
-    .white-card form {
+    .partner-offer-and-form .white-card form {
         margin: 0;
     }
 
-    .offer-text {
+    .partner-offer-and-form .offer-text {
         padding: 0;
     }
 
-    .blue-card {
+    .partner-offer-and-form .blue-card {
         display: none;
     }
 }
@@ -910,12 +910,12 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-    .offer-and-form {
+    .partner-offer-and-form .offer-and-form {
         width: 100%;
         padding: 0;
     }
 
-    .white-card form {
+    .partner-offer-and-form .white-card form {
         padding: 0;
         width: 100%;
         background: #FFFFFF;
@@ -924,41 +924,41 @@ footer {
         margin-top: 0;
     }
 
-    .first-row {
+    .partner-offer-and-form .first-row {
         display: flex;
         flex-direction: column;
         gap: 7px;
         padding-bottom: 6px;
     }
 
-    .first-row input {
+    .partner-offer-and-form .first-row input {
         width: 100%;
         height: 28px;
     }
 
-    .white-card form label {
+    .partner-offer-and-form .white-card form label {
         font-size: 10px;
         line-height: 12px;
     }
 
-    .white-card form input[type="text"] {
+    .partner-offer-and-form .white-card form input[type="text"] {
         font-weight: 400;
         font-size: 8px;
         line-height: 12px;
         padding: 12px;
     }
 
-    .white-card form input {
+    .partner-offer-and-form .white-card form input {
         border-radius: 5px;
         width: 100%;
         height: 28px;
     }
 
-    .form-control {
+    .partner-offer-and-form .form-control {
         padding-bottom: 6px;
     }
 
-    ::placeholder {
+    .partner-offer-and-form ::placeholder {
         font-size: 10px;
     }
 }

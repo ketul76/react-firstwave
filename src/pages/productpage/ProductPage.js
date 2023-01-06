@@ -41,12 +41,6 @@ function ProductPage({productData}){
             <img src={item.imgLink} alt={item.imgName}/>
             ))}
         </div>
-        <div className="companies-list">
-            {productData.productCompanyList2.map((item) => (
-            <img src={item.imgLink} alt={item.imgName}/>
-            ))}
-
-        </div>
     </div>
 </section>
 
@@ -72,21 +66,6 @@ function ProductPage({productData}){
             </div>  
             ))}
         </div>
-
-        <div className="product-feature-lists product-list2">
-        {productData.product2.map((item) => (
-              <div className={item.className}>
-              <img
-                src={item.imgLink}
-                alt=""
-              />
-              <h2>{item.buisnessText}</h2>
-              <p>
-                {item.buisnessIntro}
-              </p>
-            </div>  
-            ))}
-        </div>
     </div>
 </section>
 
@@ -94,8 +73,8 @@ function ProductPage({productData}){
 
 {/* <!-- Offer and Form section start --> */}
 
-<section className="offer-and-form">
-    <div className="white-card">
+<section className="product-offer-and-form">
+    <div className="product-white-card">
         <div className="offer-text">
             <h2>Save upto 50% of your IT <br/> cost.</h2>
             <h3>Book Your 15 minute <br/> Call</h3>
@@ -206,14 +185,14 @@ function ProductPage({productData}){
         <div className="download-info">
             <h4>{productData.downloadTitle}</h4>
             <p>{productData.downloadIntro}</p>
-            <h3><a href="">{productData.downloadLink}</a></h3>
+            <h3><a href="./">{productData.downloadLink}</a></h3>
 
             <div className="download-btn1">
                 <div className="radio">
                     <input type="radio" id="one" name="download"/>
                     <label for="one">{productData.downloadLabel1}</label>
                 </div>
-                <p><a href="">{productData.documentationLink1}</a></p>
+                <p><a href="./">{productData.documentationLink1}</a></p>
             </div>
 
             <div className="download-btn1">
@@ -221,7 +200,7 @@ function ProductPage({productData}){
                     <input type="radio" id="two" name="download"/>
                     <label for="two">{productData.downloadLabel2}</label>
                 </div>
-                <p><a href="">{productData.documentationLink2}</a></p>
+                <p><a href="./">{productData.documentationLink2}</a></p>
             </div>
 
             <div className="download-btn1">
@@ -229,7 +208,7 @@ function ProductPage({productData}){
                     <input type="radio" id="three" name="download"/>
                     <label for="three">{productData.downloadLabel3}</label>
                 </div>
-                <p><a href="">{productData.documentationLink3}</a></p>
+                <p><a href="./">{productData.documentationLink3}</a></p>
             </div>
 
             <label for="">{productData.emailLabel}</label><br/>

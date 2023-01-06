@@ -18,7 +18,7 @@ function Layout(){
     const [activePage,setActivePage] = useState('home');
     return(
         <>
-        {/* <Header activePage={activePage} setActivePage={setActivePage} />
+        {/* <Header activePage={activePage} setActivePage={setActivePage} headerData= {data.header} />
          {activePage === 'home' && <Home homeData = {data.homePage} />}
          {activePage === 'about' && <About aboutData = {data.about} />}
          {activePage === 'blog' && <Blog blogData = {data.blogPage}/>}
@@ -26,7 +26,7 @@ function Layout(){
          {activePage === 'post' && <PostPage postData = {data.postPage}/>}
          {activePage === 'product' && <ProductPage productData = {data.productPage}/>}
          {activePage === 'signin' && <Signin/>}   
-        <Footer/> */}
+        <Footer footerData = {data.footer}/> */}
             {/* <SignUp/> */}
             {/* <CompanyLeadership  companyLeadershipData= {data.companyLeaderShipPage} /> */}
             <Financial financialData = {data.financialPage} />

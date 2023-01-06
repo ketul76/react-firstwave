@@ -64,6 +64,12 @@ li a {
         gap: 35px;
         flex-wrap: wrap-reverse;
     }
+    .legal-process-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
     .legal-texts{
         padding-top: 40px;
     }
@@ -98,10 +104,6 @@ li a {
 
     .legal-process{
         background-color: #EFF5FE;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
         padding: 60px 0;
     }
     .process-list{

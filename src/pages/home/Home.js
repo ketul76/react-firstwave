@@ -17,6 +17,8 @@ function Home({homeData}){
                     <div>
                         <input id="sc" type="radio" checked name="sm-tm" />
                         <label for="sc">{homeData.homeLabel1}</label>
+                    </div>
+                    <div>
                         <input id="nm" type="radio" name="sm-tm" />
                         <label for="nm">{homeData.homeLabel2}</label>
                     </div>
@@ -46,11 +48,6 @@ function Home({homeData}){
         <div className="compaines">
             <div className="companylist1">
                {homeData.companyList1.map((item) => (
-                <img src={item.imgLink} alt={item.imgName} />
-               ))}
-            </div>
-            <div className="companylist2">
-            {homeData.companyList2.map((item) => (
                 <img src={item.imgLink} alt={item.imgName} />
                ))}
             </div>
@@ -126,7 +123,7 @@ function Home({homeData}){
                 </div>    
                 ))}
             </div>
-            <div className="programscard2">
+            {/* <div className="programscard2">
             {homeData.programmeCards2.map((item) => (
                     <div className={item.class}>
                     <img src={item.imgLink} alt=""/>
@@ -136,7 +133,7 @@ function Home({homeData}){
                     </div>
                 </div>    
                 ))}
-            </div>
+            </div> */}
         </div>
     </div>
 

@@ -49,7 +49,7 @@ li a {
     color: #17181A;
 }
 
-.demo-btn button {
+.financial-home .demo-btn button {
     padding: 11px 20px;
     background: rgba(0, 112, 240, 0.9);
     border-radius: 30px;
@@ -153,7 +153,7 @@ li a {
 
 /* form and offer section start */
 
-.white-card {
+.recives .white-card {
     height: 350px;
     display: flex;
     justify-content: center;
@@ -163,7 +163,7 @@ li a {
 }
 
 
-.blue-card {
+.recives .blue-card {
     height: 200px;
     background: #1F384F;
 }
@@ -176,10 +176,10 @@ li a {
     border-radius: 16px;
     padding: 18px 32px 18px 32px;
 }
-.offer-text{
+.recives .offer-text{
     padding-top: 25px;
 }
-.offer-text h2 {
+.recives .offer-text h2 {
     font-weight: 700;
     font-size: 46px;
     line-height: 56px;
@@ -187,7 +187,7 @@ li a {
     padding-bottom: 24px;
 }
 
-.offer-text p {
+.recives .offer-text p {
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;    
@@ -212,7 +212,7 @@ li a {
     height: 48px;
 }
 
-.form-control {
+.recives .form-control {
     padding-bottom: 16px;
 }
 
@@ -228,12 +228,12 @@ li a {
 
 
 
-.blue-card {
+.recives .blue-card {
     position: relative;
     z-index: -1;
 }
 
-.blue-circle {
+.recives .blue-circle {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -619,7 +619,7 @@ footer{
     }
 
 
-    .white-card {
+    .recives .white-card {
         height: 100%;
         flex-direction: column;
         gap: 0;
@@ -634,11 +634,11 @@ footer{
         margin: 0;
     }
 
-    .offer-text {
+    .recives .offer-text {
         padding: 0;
     }
 
-    .blue-card {
+    .recives .blue-card {
         display: none;
     }
     .corporate-governess-text{
@@ -695,11 +695,11 @@ footer{
 
 
 @media screen and (max-width: 500px) {
-    .offer-and-form {
+    .recives .offer-and-form {
         width: 100%;
         padding: 0;
     }
-    .white-card {
+    .recives .white-card {
         width: 100%;
         flex-direction: column;
         gap: 0;

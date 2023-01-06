@@ -12,43 +12,43 @@ button:hover{
     background-color: #17181A;
     cursor: pointer;
 }
-.login{
+.login-form .login{
     width: 100%;
     display: flex;
     height: 100vh;
     position: relative;
 }
-.text{
+.login-form .text{
     width: 50%;
     background: linear-gradient(141.34deg, #F5F0FF 0%, #EFF6FE 50.36%, #EDFAF5 100%);
 }
-.title-text{
+.login-form .title-text{
     position: absolute;
     left: 15%;
     top: 25%;
 }
-span{
+.login-form span{
     color: #17181ae8;
 }
-.design{
+.login-form .design{
     padding-left: 95px;
 }
-.title-text h1{
+.login-form .title-text h1{
     font-weight: 700;
     font-size: 40px;
     line-height: 60px;
     color: #17181A;
     padding-top: 24px;
 }
-.form{
+.login-form .form{
     width: 50%;
 }
-.form form{
+.login-form .form form{
     position: absolute;
     left: 58%;
     top: 20%;
 }
-.form form h2{
+.login-form .form form h2{
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
@@ -56,34 +56,34 @@ span{
     color: #17181A;
     padding-bottom: 16px;
 }
-.form-control{
+.login-form .form-control{
     padding-bottom: 8px;
 }
-.form input{
+.login-form .form input{
     width: 100%;
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #B7BFC7;
     border-radius: 8px;
 }
-.form form label{
+.login-form .form form label{
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
     color: #515458;
 }
-.btn{
+.login-form .btn{
     padding-top: 20px;
     padding-bottom: 16px;
 }
-.form form a{
+.login-form .form form a{
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
     color: #1F284F;
     text-decoration: none;
 }
-.form form button{
+.login-form .form form button{
     width: 100%;
     padding: 12px 24px;
     background: rgba(0, 112, 240, 0.9);
@@ -91,14 +91,14 @@ span{
     border-radius: 30px;
     color: #FFFFFF;
 }
-.form form p{
+.login-form .form form p{
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
     color: #575757;
 }
-.form ::placeholder{
+.login-form .form ::placeholder{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -110,7 +110,7 @@ span{
 /* media query */
 
 @media screen and (max-width: 900px) {
-    .login{
+    .login-form .login{
         width: 100%;
         position: static;
         flex-direction: column;
@@ -118,31 +118,31 @@ span{
         align-items: center;
         padding-top: 50px;   
     }
-    .title-text{
+    .login-form .title-text{
         width: 100%;
         position: static;
         padding: 10px;
     }
-    .form form{
+    .login-form .form form{
         position: static;
     }
 }
 
 @media screen and (max-width: 560px) {
-    .text{
+    .login-form .text{
         width: 100%;
     }
-    .title-text{
+    .login-form .title-text{
         width: 100%;
     }
-    .form{
+    .login-form .form{
         width: 100%;
     }
-    .form form{
+    .login-form .form form{
         width: 100%;
         padding: 15px;
     }
-    .form form p{
+    .login-form .form form p{
         font-size: 10px;
     }
 }

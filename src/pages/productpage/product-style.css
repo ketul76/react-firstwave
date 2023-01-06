@@ -175,15 +175,12 @@ li a {
     letter-spacing: 0.005em;
     color: #1F284F;
 }
-
+.companies-list{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
 .companies {
     padding-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
 }
 
 /* Companies Section End  */
@@ -210,6 +207,7 @@ li a {
 .product-feature-lists {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -256,23 +254,23 @@ li a {
 
 /* form and offer section start */
 
-.white-card {
+.product-white-card {
     height: 550px;
     display: flex;
     justify-content: center;
 }
 
-.offer-text {
+.product-white-card .offer-text {
     padding-right: 149px;
     padding-top: 155px;
 }
 
-.blue-card {
+.product-white-card .blue-card {
     height: 200px;
     background: #1F384F;
 }
 
-.white-card form {
+.product-white-card form {
     width: 500px;
     height: 675px;
     background: #FFFFFF;
@@ -312,18 +310,18 @@ li a {
     color: #575757;
 }
 
-.first-row {
+.product-white-card .first-row {
     display: flex;
     gap: 20px;
     padding-bottom: 16px;
 }
 
-.first-row input {
+.product-white-card .first-row input {
     width: 207px;
     height: 48px;
 }
 
-.white-card form label {
+.product-white-card form label {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -331,7 +329,7 @@ li a {
     line-height: 18px;
     color: #515458;
 } 
-.white-card form input[type="text"]{
+.product-white-card form input[type="text"]{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -340,7 +338,7 @@ li a {
     color: #575757;
     padding: 12px;
 }
-.white-card form input {
+.product-white-card form input {
     background: #FFFFFF;
     border: 1px solid #B7BFC7;
     border-radius: 5px;
@@ -348,11 +346,11 @@ li a {
     height: 48px;
 }
 
-.form-control {
+.product-white-card .form-control {
     padding-bottom: 16px;
 }
 
-.white-card ::placeholder {
+.product-white-card ::placeholder {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -362,11 +360,11 @@ li a {
     padding: 12px;
 }
 
-.Challenge input {
+.product-white-card .Challenge input {
     height: 90px;
 }
 
-.checkbox-label h5 {
+.product-white-card .checkbox-label h5 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -376,12 +374,12 @@ li a {
     padding: 20px 0;
 }
 
-.checkbox-label input {
+.product-white-card .checkbox-label input {
     height: 15px;
     width: 15px;
 }
 
-.checkbox-label label {
+.product-white-card .checkbox-label label {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -392,16 +390,16 @@ li a {
     padding-right: 5px;
 }
 
-.checkboxes {
+.product-white-card .checkboxes {
     display: flex;
     gap: 9px;
 }
 
-.checkbox-label {
+.product-white-card .checkbox-label {
     padding-bottom: 18px;
 }
 
-.form-btn {
+.product-white-card .form-btn {
     background: rgba(0, 112, 240, 0.9);
     border: 1px solid rgba(0, 112, 240, 0.9);
     border-radius: 30px;
@@ -426,7 +424,7 @@ li a {
     transform: translate(-50%, -50%);
 }
 
-.input-checked:checked+.label-checked {
+.product-white-card .input-checked:checked+.label-checked {
     color: #17181A;
 }
 
@@ -824,8 +822,7 @@ text-align: right;
     }
 
     /* header-home end */
-
-
+    
     .companies-list {
         display: flex;
         flex-wrap: wrap;
@@ -850,33 +847,33 @@ text-align: right;
 
 @media screen and (max-width:1050px) {
 
-    .offer-and-form{
+    .product-offer-and-form{
         width: 100%;
         min-height: 100vh;
     }
     .blue-card{
         display: none;
     }
-    .offer-text{
+    .product-white-card .offer-text{
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .offer-text h2{
+    .product-white-card .offer-text h2{
         padding: 0;
         font-size: 16px;
         line-height: normal;
     }
-    .offer-text p{
+    .product-white-card .offer-text p{
         padding: 0;
     }
-    .offer-text h3{
+    .product-white-card .offer-text h3{
         padding: 0;
         line-height: normal;
         font-size: 18px;
     }
-    .offer-text p{
+    .product-white-card .offer-text p{
         font-size: 10px;
         line-height: normal;
     }
@@ -945,7 +942,7 @@ text-align: right;
     }
     /* header-home end */
     
-    .offer-text{
+    .product-white-card .offer-text{
         display: none;
     }
     .blue-card{
@@ -1078,11 +1075,11 @@ text-align: right;
 /* 500px */
 
 @media screen and (max-width: 500px) {
-    .offer-and-form{
+    .product-offer-and-form{
         width: 100%;
         padding: 0;
     }
-    .white-card form{
+    .product-white-card form{
         padding: 0;
         width: 100%;
         background: #FFFFFF;
@@ -1090,60 +1087,60 @@ text-align: right;
         border-radius: 7px;
         margin-top: 0;
     }
-    .first-row {
+    .product-white-card .first-row {
         display: flex;
         flex-direction: column;
         gap: 7px;
         padding-bottom: 6px;
     }
     
-    .first-row input {
+    .product-white-card .first-row input {
         width: 100%;
         height: 28px;
     }
     
-    .white-card form label {
+    .product-white-card form label {
         font-size: 12px;
         line-height: 12px;  
     }
-    .white-card form input[type="text"]{
+    .product-white-card form input[type="text"]{
         font-weight: 400;
         font-size: 12px;
         line-height: 12px;
         padding: 12px;
     }
-    .white-card form input {
+    .product-white-card form input {
         border-radius: 5px;
         width: 100%;
         height: 28px;
     }
     
-    .form-control {
+    .product-white-card .form-control {
         padding-bottom: 6px;
     }
     
-    .white-card ::placeholder {
+    .product-white-card ::placeholder {
         font-weight: 400;
         font-size: 12px;
         line-height: 12px;
         padding: 6px;
     }
-    .Challenge input {
+    .product-white-card .Challenge input {
         height: 75px;
     }
     
-    .checkbox-label h5 {
+    .product-white-card .checkbox-label h5 {
         font-size: 10px;
         line-height: 12px;
         padding: 5px 0;
     }
     
-    .checkbox-label input {
+    .product-white-card .checkbox-label input {
         height: 12px;
         width: 12px;
     }
     
-    .checkbox-label label {
+    .product-white-card .checkbox-label label {
         font-size: 11px;
         line-height: normal;
         letter-spacing: 0.02em;
@@ -1151,11 +1148,11 @@ text-align: right;
         padding-right: 15px;
     }
     
-    .checkboxes {
+    .product-white-card .checkboxes {
        display: block    
     } 
     
-    .checkbox-label {
+    .product-white-card .checkbox-label {
         padding-bottom: 10px;
     }
     /* form - offer css end */
@@ -1199,10 +1196,10 @@ text-align: right;
     .download-checkbox{
         padding: 0;
     }
-    .radio label{
+     .radio label{
         font-size: 12px;
     }
-    .radio a{
+     .radio a{
         font-size: 12px;
     }
     .download-info button{

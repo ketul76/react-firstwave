@@ -2,7 +2,7 @@ import './signin.css';
 
 function Signin(){
     return(
-        <section>
+        <section className='login-form'>
         <div className="login">
          <div className="text">
            <div className="title-text">

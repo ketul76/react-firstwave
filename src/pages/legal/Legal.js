@@ -35,18 +35,6 @@ function Legal({legalData}){
                 </div>    
                 ))}
             </div>
-            <div className="legal-process-list">
-            {legalData.legalterms2.map((item) => (
-                    <div className={item.class}>
-                    <img src={item.imgLink} alt=""/>
-                    <div className="process-texts">
-                        <h3>{item.title}</h3>
-                        <h5>{item.text1} <br/> {item.text2}</h5>
-                        <p><a href="./">{item.downloadLink}</a></p>
-                    </div>
-                </div>    
-                ))}
-            </div>
         </section>
     {/* <!-- legal Processing section End --> */}
         </>

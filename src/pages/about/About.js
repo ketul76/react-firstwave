@@ -65,33 +65,6 @@ function About({aboutData}){
             </div>
             ))}
           </div>
-          <div className="allLocation">
-          {aboutData.locationList2.map((item) => (
-              <div className={item.class}>
-              <img
-                className="mainimg"
-                src={item.imglink}
-                alt=""
-              />
-              <div className="locationtext">
-                <h3>{item.locationTitle}</h3>
-                <div className="contacts-address">
-                  <img src={item.callimglink} alt="" />
-                  <p>{item.phoneNumber}</p>
-                </div>
-                <div className="contacts-address">
-                  <img src={item.msgLink} alt="" />
-                  <p>{item.email}</p>
-                </div>
-                <div className="contacts-address">
-                  <img src={item.addressLink} alt="" />
-                  <p>{item.address}
-                  </p>
-                </div>
-              </div>
-            </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -110,14 +83,6 @@ function About({aboutData}){
             />  
             ))}
           </div>
-          <div className="companies-list">
-          {aboutData.companyList2.map((item) => (
-              <img
-              src={item.imgLink}
-              alt={item.imgName}
-            />  
-            ))}
-          </div>
         </div>
       </section>
 
@@ -130,21 +95,6 @@ function About({aboutData}){
         <div className="product-features">
           <div className="product-feature-lists">
             {aboutData.product1.map((item) => (
-              <div className={item.className}>
-              <img
-                src={item.imgLink}
-                alt=""
-              />
-              <h2>{item.buisnessText}</h2>
-              <p>
-                {item.buisnessIntro}
-              </p>
-            </div>  
-            ))}
-          </div>
-
-          <div className="product-feature-lists product-list2">
-            {aboutData.product2.map((item) => (
               <div className={item.className}>
               <img
                 src={item.imgLink}
@@ -222,22 +172,13 @@ function About({aboutData}){
             </div>
             ))}
           </div>
-          <div className="team">
-          {aboutData.teamsList2.map((item) => (
-            <div className={item.class}>
-              <img src={item.imgLink} alt="" />
-              <h2>{item.name}</h2>
-              <h3>{item.post}</h3>
-            </div>
-            ))}
-          </div>
         </div>
       </section>
       {/* <!-- meet our teams end -->
 
       <!-- partner and Form section start --> */}
 
-      <section className="offer-and-form">
+      <section className="partner-offer-and-form">
         <div className="white-card">
           <div className="offer-text">
             <h2>Become a Partner</h2>

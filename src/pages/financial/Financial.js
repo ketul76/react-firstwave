@@ -130,30 +130,12 @@ function Financial(props){
                 <h2>Frequently asked questions</h2>
                <div className="faq-questions-ans">
                 <div className="que-ans-lists">
-                    <div className="que-ans">
-                        <h5>What is the ASX ticker code for FirstWave Cloud Technology Limited?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
-                    <div className="que-ans">
-                        <h5>What was the IPO price and issue date of FirstWave’s shares?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
-                    <div className="que-ans">
-                        <h5>How do I make changes to my holding?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
-                    <div className="que-ans">
-                        <h5>Where will I find FirstWave’s Corporate Governance Statement?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
-                    <div className="que-ans">
-                        <h5>How do I sell my shares?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
-                    <div className="que-ans">
-                        <h5>Who is the Company’s Auditor?</h5>
-                        <img src="./financial-images/expand_more.svg" alt="" />
-                    </div>
+                    {finacial.queAns.map((item) => (
+                    <div className={item.class}>
+                        <h5>{item.text}</h5>
+                        <img src={item.imgLink} alt="" />
+                    </div>    
+                    ))}
                 </div>
                </div>    
                 
